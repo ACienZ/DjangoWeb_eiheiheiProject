@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>绿翔培训-梦翔诞生的摇篮~</title>
+    {% load staticfiles %}
+    <link href="{% static 'main_app/css/bootstrap.css' %}" rel="stylesheet type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <script src="{% static 'main_app/js/jquery.min.js' %}"></script>
+    <!--theme-style-->
+    <link href="{% static 'main_app/css/style.css' %}" rel="stylesheet type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script type="text/javascript" src="{% static 'main_app/js/move-top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'main_app/js/easing.js' %}"></script>
+    <!--<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+    </script>-->
+
+    <script type="text/javascript" src="{%static 'main_app/js/numscroller-1.0.js' %}"></script>
+
+    <link href="{% static 'main_app/css/index.css' %}" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+    {% include 'main_app/head.html' %}
+
+    <!--content-->
+    <script src="{% static 'main_app/js/responsiveslides.min.js' %}"></script>
+    <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      $("#slider2").responsiveSlides({
+        auto: true,
+        pager: true,
+        speed: 300,
+        namespace: "callbacks",
+      });
+    });
+    </script>
+
+    <!--banner-->
+    <div class="banner">
+        <div class="container">        
+            <div class="slider">
+                <ul class="rslides" id="slider2">
+                    <li>
+                        <div class="banner-text">
+                            <b>[</b>
+                            <h2>绿翔教育<span>教育事业前端的领跑者</span></h2>
+                            <h6>助你中得彩票 迎娶白富美 走向人生巅峰</h6><b class="right-a">]</b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-text">
+                            <b>[</b>
+
+                            <h2>绿翔培训<span>教育事业开拓的发现者</span></h2>
+                            <h6>助你领先他人一步 拜托矮穷矬 走向人生巅峰</h6><b class="right-a">]</b>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-text">
+                            <b>[</b>
+                            <h2>绿翔集团<span>教育事业背后的支持者</span></h2>
+                            <h6>相信绿翔 相信品牌的力量 助你走向人生巅峰</h6><b class="right-a">]</b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end-->
+
+    <!--gallery-->
+    <div class="gallery" id="gallery">
+        <div class="container">
+            <div class="ser-top ga-top">
+                <h3>成果展示</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b>
+                </div>
+                <p>金坷垃大法好 金坷垃大法妙 金坷垃 金坷垃 呱呱叫~~~</p>
+
+            </div>
+
+            <ul class="simplefilter">
+                <li class="active" data-filter="all">全部阵营</li>
+                <li data-filter="1">白鹰</li>
+                <li data-filter="2">皇家</li>
+                <li data-filter="3">铁血</li>
+                <li data-filter="4">重樱</li>
+            </ul>
+
+            <div class="filtr-container">
+                <div class=" filtr-item gallery-t" data-category="1" data-sort="Busy streets">
+
+                    <a href="{% static 'main_app/picture/ga.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>埃尔德里奇</h3>
+                                <p>
+                                    美国在二战时期先后建造了六个级别的护航驱逐依次为【埃瓦茨】级、【巴克利】级、【坎农】级、【埃兹尔】级、【拉德罗】级、和【约翰·巴特勒】级。
+                                    【坎农】级实际上是【巴克利】级的长舰体和【埃瓦茨】级的柴电动力系统组合而成的，其主尺度与【巴克利】级基本相同
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="1" data-sort="Luminous night">
+                    <a href="{% static 'main_app/picture/ga1.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga1.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>企业</h3>
+                                <p>
+                                    企业号航空母舰（英文：USS Enterprise，中文意译：进取号或勇往号），舷号CV-6。绰号：“大E（Big E）”或“幸运E（Luckily E）”
+                                    她是服役于美国海军的第六艘航空母舰，是一艘隶属于美国海军的航空母舰，为约克城级航空母舰的二号舰，也是美国历史上第七艘冠以“企业号”之名的舰船，舰名源自美国独立战争期间美军俘获并更名的一艘英国单桅纵帆船。
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="2" data-sort="City wonders">
+                    <a href="{% static 'main_app/picture/ga2.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga2.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>光辉</h3>
+                                <p>
+                                    版本亲妈。光辉舰载机为2架战斗机和1架鱼雷机，在执行空袭中，战斗机会给鱼雷机护航时投弹…（战斗机顺手干了轰炸机的活儿），某种意义上来说相当于携带了5架飞机。
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="2" data-sort="In production">
+                    <a href="{% static 'main_app/picture/ga3.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga3.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>贝尔法斯特</h3>
+                                <p>
+                                    战斗开始10秒后使用烟雾弹，随后每20秒有20.0%概率使用烟雾弹，处于烟幕中的先锋部队回避率提高15.0%（35.0%），受到航空伤害降低15.0%（35.0%），持续10秒，同技能效果不叠加
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="2" data-sort="Industrial site">
+                    <a href="{% static 'main_app/picture/ga4.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga4.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>胡德</h3>
+                                <p>
+                                    德号（英语：HMS Hood ，舷号：51），是英国建造的最后一艘战列巡洋舰，属于海军上将级战列巡洋舰；舰名典故为纪念18世纪英国皇家海军上将山缪·胡德子爵，为历史上第4艘以“胡德”（Hood）命名的军舰。                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="3" data-sort="Peaceful lake">
+                    <a href="{% static 'main_app/picture/ga5.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga5.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>欧根亲王</h3>
+                                <p>
+                                    欧根亲王号重巡洋舰（德语：Schwerer Kreuzer Prinz Eugen），是纳粹海军希佩尔海军上将级重巡洋舰的3号舰，名字来源于奥地利历史上一名陆军元帅欧根亲王。                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="4" data-sort="City lights">
+                    <a href="{% static 'main_app/picture/ga6.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga6.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>加贺</h3>
+                                <p>
+                                    加贺号是日本帝国海军设计建造的航空母舰。本舰原为八八舰队计划中第三艘建造的战列舰，1919年1月，海军对川崎造船厂下令准备建造加贺的前置作业,1920年7月19日于神户川崎造船厂以战列舰设计起造，1921年11月17日下水。
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="4" data-sort="Dreamhouse">
+                    <a href="{% static 'main_app/picture/ga7.gif' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga7.gif' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>赤城</h3>
+                                <p>
+                                    旧日本海军“天城”级重型空母二号舰，第一航空舰队旗舰、第一航空战队赤城是日本帝国海军的航空母舰。赤城号最初设计规划为天城级战斗巡洋舰的2号舰，因华盛顿海军条约而将天城级改装为航空母舰；不过因为关东大地震的破坏让天城号报废，仅赤城号完成改造。
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class=" filtr-item" data-category="4" data-sort="Dreamhouse">
+                    <a href="{% static 'main_app/picture/ga8.jpg' %}" rel="title" class="b-link-stripe b-animate-go  thickbox">
+
+                        <figure>
+                            <img src="{% static 'main_app/picture/ga8.jpg' %}" class="img-responsive" alt=" " />	<figcaption>
+                                <h3>高雄</h3>
+                                <p>
+                                    高雄号为基于昭和2年度舰艇补充计划下建造。1927年（昭和2年）6月23日，高雄被正式授与舰名，1930年（昭和5年）5月12日进水。高雄型2号舰爱宕与高雄在同日动工，亦在同日命名，不过下水日期稍稍晚于高雄（1930年6月16日），但竣工却早高雄2个月。高雄在1932年（昭和7年）5月31日竣工就役后，与爱宕共同被编入横须贺镇守府藉﹐并隶属第2舰队第4战队。
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
+
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery & Filterizr -->
+
+    <script src="{% static 'main_app/js/jquery.filterizr.js' %}"></script>
+    <script src="{% static 'main_app/js/controls.js' %}"></script>
+
+    <!-- Kick off Filterizr -->
+    <script type="text/javascript">
+        $(function() {
+            //Initialize filterizr with default options
+            $('.filtr-container').filterizr();
+        });
+    </script>
+    <!---->
+    <script src="{% static 'main_app/js/jquery.chocolat.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main_app/css/chocolat.css' %}" type="text/css" media="screen" charset="utf-8">
+    <!--light-box-files -->
+    <script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.filtr-item a').Chocolat();
+		});
+    </script>
+
+    <link href="{%static 'main_app/css/owl.carousel.css' %}" rel="stylesheet">
+    <script src="{% static 'main_app/js/owl.carousel.js' %}"></script>
+
+    <!-- requried-jsfiles-for owl -->
+    <script>
+		$(document).ready(function() {
+			$("#owl-demo2").owlCarousel({
+				items : 1,
+				lazyLoad : false,
+				autoPlay : true,
+				navigation : false,
+				navigationText :  false,
+				pagination : true,
+			});
+	    });
+    </script>
+    <!-- //requried-jsfiles-for owl -->
+    <!-- start content_slider -->
+    <!--//gallery end-->
+
+
+    <!---statistics--->
+    <div class="statistics" id="success">
+        <div class="container">
+            <div class="ser-top ser-top1">
+                <h3>绿翔成就 世界瞩目</h3>
+
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b>
+                </div>
+            </div>
+            <div class="statistics-grids">
+                <div class="col-md-3 statistics-grid">
+                    <div class="statistics-text">
+                        <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='5206' data-delay='.5' data-increment="100">5206</div>
+                        <h5>究极教师</h5>
+                        <div class="sar-t">
+                            <b></b>
+                            <b class="line-1"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 statistics-grid">
+                    <div class="statistics-text">
+                        <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='372' data-delay='.5' data-increment="100">372</div>
+                        <h5>密制教授</h5>
+                        <div class="sar-t">
+                            <b></b>
+                            <b class="line-1"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 statistics-grid">
+                    <div class="statistics-text">
+                        <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1052' data-delay='.5' data-increment="100">105</div>
+                        <h5>各种奖项</h5>
+                        <div class="sar-t">
+                            <b></b>
+                            <b class="line-1"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 statistics-grid">
+                    <div class="statistics-text">
+                        <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='256' data-delay='.5' data-increment="100">256</div>
+                        <h5>金坷垃~</h5>
+                        <div class="sar-t">
+                            <b></b>
+                            <b class="line-1"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---statistics end--->
+
+    <!--team-->
+    <div class="team" id="team">
+        <div class="container">
+            <div class="ser-top ga-top">
+                <h3>名师风采</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b>
+                </div>
+
+            </div>
+
+            <div class="col-md-3 bottom-grid ">
+                <div class="btm-right">
+                    <img src="{% static 'main_app/picture/te.jpg' %}" class="img-responsive" alt=" ">
+                    <div class="captn">
+                        <h4>江院长</h4>
+                        <p>院长</p>
+                        <ul class="captn2">
+                            <p>伟大领袖</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 bottom-grid ">
+                <div class="btm-right">
+                    <img src="{% static 'main_app/picture/te1.jpg' %}" class="img-responsive" alt=" ">
+                    <div class="captn">
+
+                        <h4>陆仁贾</h4>
+                        <p>究极人民教师</p>
+                        <ul class="captn2">
+                            <p>小学领袖</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 bottom-grid ">
+                <div class="btm-right">
+                    <img src="{% static 'main_app/picture/te2.jpg' %}" class="img-responsive" alt=" ">
+                    <div class="captn">
+
+                        <h4>靼酱油徳</h4>
+                        <p>炒鸡人民教师</p>
+                        <ul class="captn2">
+                            <p>啥也不是</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 bottom-grid ">
+                <div class="btm-right">
+                    <img src="{% static 'main_app/picture/te3.jpg' %}" class="img-responsive" alt=" ">
+                    <div class="captn">
+
+                        <h4>贾仁陆</h4>
+                        <p>无敌人民教授</p>
+                        <ul class="captn2">
+                            <p>大学部部长</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    
+    {% include 'main_app/bottom.html' %}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            var defaults = {
+                  containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+             };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!-- for bootstrap working -->
+    <script src="{% static 'main_app/js/bootstrap.min.js' %}"></script>
+    <!-- //for bootstrap working -->
+</body>
