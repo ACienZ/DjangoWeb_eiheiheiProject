@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{content.PageTitle}}</title>
+    {% load staticfiles %}
+    <link href="{% static 'colum_app/css/bootstrap.css' %}" rel="stylesheet type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <script src="{% static 'colum_app/js/jquery.min.js' %}"></script>
+    <!--theme-style-->
+    <link href="{% static 'colum_app/css/style.css' %}" rel="stylesheet type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script type="text/javascript" src="{% static 'colum_app/js/move-top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'colum_app/js/easing.js' %}"></script>
+    <script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+    </script>
+
+    <script type="text/javascript" src="{% static 'colum_app/js/numscroller-1.0.js' %}"></script>
+
+    <link href="{% static 'colum_app/css/index.css' %}" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    {% include 'main_app/head.html' %}
+
+    <!--content-->
+    <script src="{% static 'colum_app/js/responsiveslides.min.js' %}"></script>
+    <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      $("#slider2").responsiveSlides({
+        auto: true,
+        pager: true,
+        speed: 300,
+        namespace: "callbacks",
+      });
+    });
+    </script>
+
+    <div class="service" id="services">
+        <div class="container">
+            <div class="ser-top">
+                <h3>{{content.StageName}}</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b>
+                </div>
+                <p>{{content.StageTitle}}</p>
+
+            </div>
+            <div class="service-head">
+                <div class="col-md-5 ser-head">
+
+                    <h5>学院简介</h5>
+                    <img src="{% static content.Picture %}" class="img-responsive" alt="">
+                    <p>
+                        {{content.StageInfo}}
+                    </p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-edit"></i>{{content.InfoA}}</li>
+                        <li><i class="glyphicon glyphicon-edit"></i>{{content.InfoB}}</li>
+                        <li><i class="glyphicon glyphicon-edit"></i>{{content.InfoC}}</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-7 ser-head1">
+                    <div class="col-md-6 ser-grid ">
+                        <span></span>
+                        <div class=" hi-icon-effect-7 hi-icon-effect-7a">
+                            <i class="glyphicon glyphicon-leaf hi-icon "> </i>
+                        </div>
+                        <h3>学院环境</h3>
+                        <p>{{content.Environment}}</p>
+
+                    </div>
+                    <div class="col-md-6 ser-grid ">
+                        <div class=" hi-icon-effect-7 hi-icon-effect-7a">
+                            <i class="glyphicon glyphicon-user hi-icon "> </i>
+                        </div>
+                        <h3>师资力量</h3>
+                        <p>{{content.Teacher}}</p>
+
+                    </div>
+                    <div class="col-md-6 ser-grid ">
+                        <div class=" hi-icon-effect-7 hi-icon-effect-7a">
+                            <i class="glyphicon glyphicon-cog hi-icon "> </i>
+                        </div>
+
+                        <h3>后勤团队</h3>
+                        <p>{{content.LogisticwTeam}}</p>
+                    </div>
+                    <div class="col-md-6 ser-grid ">
+                        <div class=" hi-icon-effect-7 hi-icon-effect-7a">
+                            <i class="glyphicon glyphicon-piggy-bank hi-icon"> </i>
+                        </div>
+                        <h3>资本实力</h3>
+                        <p>{{content.Money}}</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--content E-->
+
+    {% include 'main_app/bottom.html' %}
+
+    <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear'
+					 		};
+							*/
+							$().UItoTop({ easingType: 'easeOutQuart' });
+						});
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+    <!-- for bootstrap working -->
+    <script src="{% static 'colum_app/js/bootstrap.min.js' %}"></script>
+    <!-- //for bootstrap working -->
+</body>
+</html>

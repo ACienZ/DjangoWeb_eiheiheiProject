@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>此网页对你不可见！！！</title>
+    <style type="text/css">
+        body {
+            vertical-align: middle;
+        }
+
+        div.center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25% 0 0 -320px;
+            width: 640px;
+            min-height: 427px;
+            padding: 0px;
+        }
+
+        div.errmsg {
+            text-align: left;
+            width: 640px;
+            line-height: 150%;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        .center {
+            display: none;
+        }
+    </style>
+    {% load staticfiles %}
+    <link href="{% static 'main_app/css/page-core.css' %}" rel="stylesheet">
+    <link href="{% static 'main_app/css/error.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'main_app/css/jquery-ui.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'main_app/css/page-core.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'main_app/css/topic.css' %}" type="text/css">
+
+    <script type="text/javascript" src="{% static 'main_app/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'main_app/js/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'main_app/js/base.core.js' %}"></script>
+    <script type="text/javascript" src="{% static 'main_app/js/seed.js' %}"></script>
+    <script type="text/javascript" src="{% static 'main_app/js/bundle.js' %}"></script>
+
+    <script type="text/javascript">
+        var options={
+            type:'defaultError'
+        }
+    </script>
+    <style id="style-1-cropbar-clipper">
+        /* Copyright 2014 Evernote Corporation. All rights reserved. */
+        .en-markup-crop-options {
+            top: 18px !important;
+            left: 50% !important;
+            margin-left: -100px !important;
+            width: 200px !important;
+            border: 2px rgba(255,255,255,.38) solid !important;
+            border-radius: 4px !important;
+        }
+
+            .en-markup-crop-options div div:first-of-type {
+                margin-left: 0px !important;
+            }
+    </style>
+</head>
+
+<body style="direction: ltr;">
+    <div class="error-container">
+        <div class="error-panel server-error error-404">
+            <img src="{% static 'main_app/picture/very_sorry.png' %}">
+            <div>
+                <div class="left-panel">
+                    <a class="rollback-btn" href="MainPage">返回首页</a>
+                </div>
+                <div class="right-panel">
+                    <b>错误号:</b> 404 No Found<br>
+                    <b>用户IP:</b> 地球/中国/长春市/皇家理工<br>
+                    <b>前端服务器: </b>GreenShit_TC130<br>
+                    <b>处理服务器:</b>GreenShit_2233<br>
+                </div>
+            </div>
+        </div>
+        <div class="error-split" id="up">
+        </div>
+    </div>
+
+    <div class="b-page-body">
+        <div class="container-body">
+            <div class="b-head topic"><span class="b-head-i"></span><span class="b-head-t">可能出现的问题</span> 
+            </div>
+
+            <div class="art_list">
+                <ul>
+                    <li>
+                        <a><img src="{% static 'main_app/picture/renchou.png' %}"></a>
+                        <h2><a>你太丑了</a> </h2>
+                        <div class="info">
+                            问题描述:您实在是太丑了 以至于服务器被您丑瞎了 导致您无法看到此网页
+                        </div>
+                        <div class="info">
+                            解决办法：这就不好办了啊 此问题无法解决
+                        </div>
+                        <div class="artInfo">
+                            <span id="p_date">绿翔集团建议您:洗洗睡吧</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{% static 'main_app/picture/qiong.png' %}" target="_blank"><img src="{% static 'main_app/picture/eiheihei.png' %}"></a>
+                        <h2><a href="{% static 'main_app/picture/qiong.png' %}" target="_blank">你太穷了</a> </h2>
+                        <div class="info">
+                            问题描述:您实在是太穷了 导致服务器看不起您 拒绝为您服务 导致您无法看到此网页
+                        </div>
+                        <div class="info">
+                            解决办法：打开此链接并扫描二维码 成为绿翔集团绿翔VIP 美好生活在等着你~~~
+                        </div>
+                        <div class="artInfo">
+                            <span id="p_date">绿翔集团建议您:向服务器证明自己吧~</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{% static 'main_app/CTF.rar' %}" target="_blank"><img src="{% static 'main_app/picture/taiben.png' %}"></a>
+                        <h2><a href="{% static 'main_app/CTF.rar' %}" target="_blank">你太笨了</a> </h2>
+                        <div class="info">
+                            问题描述：您实在是太笨了 因为您的频繁失误 服务器已经宕机 导致您无法看到此网页
+                        </div>
+                        <div class="info">
+                            解决办法：做一道CTF的题目吧 答案就是备用网址
+                        </div>
+                        <div class="artInfo">
+                            <span id="p_date">绿翔集团建议您:提升一下智商如何?</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

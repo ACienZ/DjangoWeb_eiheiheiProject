@@ -11,4 +11,7 @@ def JumpToMainPage(request):
     return HttpResponseRedirect(reverse('MainPage'))
 
 def test(request):
-    return render(request,'main_app/bottom.html')
+    return render(request,'main_app/ColumnPage_template.html')
+
+def GreenShitOps(request):
+    return render(request,'main_app/Ops_GreenShit.html')

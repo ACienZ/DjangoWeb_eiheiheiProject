@@ -16,10 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main_app import views as main_app_views
+from colum_app import views as colum_app_views
 
 urlpatterns = [
+    #main_app
     path('test/',main_app_views.test,name='test'),
     path('admin/', admin.site.urls),
     path('',main_app_views.JumpToMainPage,name='JumpToMainPage'),
     path('MainPage',main_app_views.MainPage,name='MainPage'),
+    path('Ops_GreenShit',main_app_views.GreenShitOps,name='GreenShitOps'),
+
+    #colum_app
+    path('ColumnPage_primary',colum_app_views.Primary,name='Primary'),
+    path('ColumnPage_middle',colum_app_views.Middle,name='Middle'),
+    path('ColumnPage_high',colum_app_views.High,name='High'),
+    path('ColumnPage_university',colum_app_views.University,name='university'),
+
+    #log_app
 ]
+
+# handeler404='main_app_views.GreenShitOps'
