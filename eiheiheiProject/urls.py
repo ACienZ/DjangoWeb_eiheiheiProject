@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from main_app import views as main_app_views
 from colum_app import views as colum_app_views
+from sign_app import views as sign_app_views
 
 urlpatterns = [
     #main_app
@@ -33,6 +34,9 @@ urlpatterns = [
     path('ColumnPage_university',colum_app_views.University,name='university'),
 
     #log_app
+    path('SignIn',sign_app_views.sign_in,name='sign_in'),
+    path('SignUp',sign_app_views.sign_up,name='sign_up'),
+    path('SignOut',sign_app_views.sign_out,name='sign_out'),
 ]
 
 # handeler404='main_app_views.GreenShitOps'

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>绿翔培训-注册</title>
+
+  <!-- Bootstrap core CSS -->
+  {% load staticfiles %}
+  <link href="{% static 'sign_app/css/bootstrap.min.css' %}" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #eee;
+    }
+
+    .form-signin {
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+      margin-bottom: 10px;
+    }
+
+    .form-signin .checkbox {
+      font-weight: normal;
+    }
+
+    .form-signin .form-control {
+      position: relative;
+      height: auto;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .form-signin .form-control:focus {
+      z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <form method='POST' class="form-signin">
+      {% csrf_token %}
+      <h2 class="form-signin-heading">注册</h2>
+      <div>
+        <label for="inputEmail" class="sr-only">用户名</label>
+        <!-- <input id="inputEmail" class="form-control" placeholder="用户名" name="username" required autofocus> -->
+        {{form.username}}
+      </div>
+      <div>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <!-- <input type="password" id="inputPassword" class="form-control" name="password" placeholder="密码" required> -->
+        {{form.passwd1}}
+      </div>
+      <div>
+            <label for="inputPassword" class="sr-only">确认密码</label>
+            <!-- <input type="password" id="inputPassword" class="form-control" name="password" placeholder="密码" required> -->
+            {{form.passwd2}}
+        </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+    </form>
+  </div>
+</body>
+
+</html>

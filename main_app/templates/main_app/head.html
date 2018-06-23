@@ -23,12 +23,12 @@
             <div class="collapse navbar-collapse nav-wil links" id="bs-example-navbar-collapse-1">
                 <div class="fill">
                     <ul class="nav navbar-nav ">
-                        <li><a href="MainPage" class="scroll active" data-hover="Home">首页</a> </li>
-                        <li><a href="ColumnPage_primary" class="scroll" data-hover="About">小学基地</a> </li>
-                        <li><a href="ColumnPage_middle" class="scroll" data-hover="Gallery">初中基地</a></li>
-                        <li><a href="ColumnPage_high" class="scroll" data-hover="Gallery">高中基地</a></li>
-                        <li><a href="ColumnPage_university" class="scroll" data-hover="Gallery">大学基地</a></li>
-                        <li><a href="Ops_GreenShit" target="_blank" class="scroll" data-hover="Contact">绿翔集团</a></li>
+                        <li><a href="/MainPage" class="scroll active" data-hover="Home">首页</a> </li>
+                        <li><a href="/ColumnPage_primary" class="scroll" data-hover="About">小学基地</a> </li>
+                        <li><a href="/ColumnPage_middle" class="scroll" data-hover="Gallery">初中基地</a></li>
+                        <li><a href="/ColumnPage_high" class="scroll" data-hover="Gallery">高中基地</a></li>
+                        <li><a href="/ColumnPage_university" class="scroll" data-hover="Gallery">大学基地</a></li>
+                        <li><a href="/Ops_GreenShit" target="_blank" class="scroll" data-hover="Contact">绿翔集团</a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -42,9 +42,14 @@
                 <form>
                     <input class="sb-search-input" placeholder="请输入课程或班号" type="search" name="search" id="search">
                     <input class="sb-search-submit" type="submit" value="">
-                    <span class="sb-icon-search">
-                        <img src="{% static 'main_app/picture/search.gif' %}" />
-                    </span>
+                    <a href="/SignIn">
+                        <span class="sb-icon-search">
+                            <img src="{% static 'main_app/picture/signin.jpg' %}" />
+                            <div>
+                                登录
+                            </div>
+                        </span>
+                    </a>
                 </form>
             </div>
         </div> -->
@@ -55,6 +60,33 @@
                     new UISearch( document.getElementById( 'sb-search' ) );
         </script> -->
         <!----//search-scripts---->
+        {% if login %}
+            <div class="signed">
+                    <a>
+                        <div>
+                            欢迎~ {{username}}
+                        </div>
+                    </a>
+                    <a href="/SignOut">
+                        <div>
+                            退出
+                        </div>
+                    </a>
+            </div>
+        {% else %}
+            <div class="sign">
+                    <a href="/SignIn">
+                        <div>
+                            登录
+                        </div>
+                    </a>
+                    <a href="/SignUp">
+                        <div>
+                            注册
+                        </div>
+                    </a>
+            </div>
+        {% endif %}
 
 
         <div class="clearfix"></div>
