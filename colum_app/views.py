@@ -5,8 +5,8 @@ from django.urls import reverse
 # Create your views here.
 
 #for test
-def test(request):
-    return render(request,'colum_app/ColumnPage_template.html')
+# def test(request):
+#     return render(request,'colum_app/ColumnPage_template.html')
 
 def Primary(request):
     content={
@@ -23,8 +23,11 @@ def Primary(request):
         'Money':'最没钱的一个学院。。。人均工资也就三四万吧~~~',
         'Picture':'colum_app/picture/primary.png'
     }
-
-    return render(request,'colum_app/ColumnPage_template.html',{'content':content})
+    sess=request.session.get('username')
+    if sess:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':True,'username':sess,'content':content})
+    else:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':False,'content':content})
 
 def Middle(request):
     content={
@@ -42,7 +45,11 @@ def Middle(request):
         'Picture':'colum_app/picture/middle.png'
     }
 
-    return render(request,'colum_app/ColumnPage_template.html',{'content':content})
+    sess=request.session.get('username')
+    if sess:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':True,'username':sess,'content':content})
+    else:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':False,'content':content})
 
 
 def High(request):
@@ -61,7 +68,11 @@ def High(request):
         'Picture':'colum_app/picture/high.png'
     }
 
-    return render(request,'colum_app/ColumnPage_template.html',{'content':content})
+    sess=request.session.get('username')
+    if sess:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':True,'username':sess,'content':content})
+    else:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':False,'content':content})
 
 
 def University(request):
@@ -80,6 +91,8 @@ def University(request):
         'Picture':'colum_app/picture/university.png'
     }
 
-    return render(request,'colum_app/ColumnPage_template.html',{'content':content})
-
-
+    sess=request.session.get('username')
+    if sess:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':True,'username':sess,'content':content})
+    else:
+        return render(request,'colum_app/ColumnPage_template.html',{'login':False,'content':content})

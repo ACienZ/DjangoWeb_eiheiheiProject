@@ -60,28 +60,36 @@
                     new UISearch( document.getElementById( 'sb-search' ) );
         </script> -->
         <!----//search-scripts---->
+        <style type="text/css">
+            signed sign {
+                position: relative;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-color: rgb(40, 130, 205);
+            }
+        </style>
         {% if login %}
-            <div class="signed">
+            <div id="sb-search" class="sb-search">
                     <a>
-                        <div>
+                        <div class="signin_">
                             欢迎~ {{username}}
                         </div>
                     </a>
                     <a href="/SignOut">
-                        <div>
+                        <div class="signup_">
                             退出
                         </div>
                     </a>
             </div>
         {% else %}
-            <div class="sign">
+            <div id="sb-search" class="sb-search">
                     <a href="/SignIn">
-                        <div>
+                        <div class="signin_">
                             登录
                         </div>
                     </a>
                     <a href="/SignUp">
-                        <div>
+                        <div class="signup_">
                             注册
                         </div>
                     </a>

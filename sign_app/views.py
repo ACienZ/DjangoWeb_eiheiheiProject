@@ -13,11 +13,7 @@ from sign_app.models import UserModel
 def sign_in(request):
     if request.method=="GET":
         form=UserSignInForm()
-        return render(
-            request,
-            'sign_app/SignIn.html',
-            {'form':form,}
-        )
+        return render(request,'sign_app/SignIn.html',{'iswrong':False,'form':form,})
     elif request.method=="POST":
         form=UserSignInForm(request.POST)
         if form.is_valid():
@@ -28,16 +24,14 @@ def sign_in(request):
                 request.session['username']=username_
                 return HttpResponseRedirect('MainPage')
             else:
-                return HttpResponse(u'wrong')
+                #return HttpResponse(u'wrong')
+                return render(request,'sign_app/SignIn.html',{'iswrong':True,'form':form,})
 
 def sign_up(request):
     if request.method=="GET":
         form=UserSignUpForm()
-        return render(
-            request,
-            'sign_app/SignUp.html',
-            {'form':form,}
-        )
+        str_=''
+        return render(request,'sign_app/SignUp.html',{'iswrong':False,'form':form,'str_':str_})
     elif request.method=="POST":
         form=UserSignUpForm(request.POST)
         if form.is_valid():
@@ -46,8 +40,10 @@ def sign_up(request):
             passwd2_=form.cleaned_data['passwd2']
             user=UserModel.objects.filter(username__exact=username_)
             if user:
-                return HttpResponse(u'username has already used')
+                str_='用户名已存在'
+                #return HttpResponse(u'username has already used')
                 # return HttpResponseRedirect('MainPage')
+                return render(request,'sign_app/SignUp.html',{'iswrong':True,'form':form,'str_':str_})
             else:
                 if passwd1_==passwd2_:
                     newuser=UserModel(username=username_,passwd=passwd1_)
@@ -55,7 +51,9 @@ def sign_up(request):
                     request.session['username']=username_
                     return HttpResponseRedirect('MainPage')
                 else:
-                    return HttpResponse(u'passwords are not same')
+                    str_='密码不一致'
+                    #return HttpResponse(u'passwords are not same')
+                    return render(request,'sign_app/SignUp.html',{'iswrong':True,'form':form,'str_':str_})
 
 def sign_out(request):
     auth.logout(request)

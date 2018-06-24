@@ -57,6 +57,11 @@
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
+
+    .retry{
+      font-size: 16px;
+      color:red;
+    }
   </style>
 </head>
 
@@ -68,6 +73,11 @@
     <form method='POST' class="form-signin">
       {% csrf_token %}
       <h2 class="form-signin-heading">注册</h2>
+      {% if iswrong %}
+        <div>
+          <h2 class="retry">{{str_}}</h2>
+        </div>
+      {% endif %}
       <div>
         <label for="inputEmail" class="sr-only">用户名</label>
         <!-- <input id="inputEmail" class="form-control" placeholder="用户名" name="username" required autofocus> -->

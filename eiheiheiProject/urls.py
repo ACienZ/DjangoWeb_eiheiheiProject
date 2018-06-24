@@ -21,7 +21,7 @@ from sign_app import views as sign_app_views
 
 urlpatterns = [
     #main_app
-    path('test/',main_app_views.test,name='test'),
+    #path('test/',main_app_views.test,name='test'),
     path('admin/', admin.site.urls),
     path('',main_app_views.JumpToMainPage,name='JumpToMainPage'),
     path('MainPage',main_app_views.MainPage,name='MainPage'),
