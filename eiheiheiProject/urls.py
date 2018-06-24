@@ -22,7 +22,7 @@ from sign_app import views as sign_app_views
 urlpatterns = [
     #main_app
     #path('test/',main_app_views.test,name='test'),
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('',main_app_views.JumpToMainPage,name='JumpToMainPage'),
     path('MainPage',main_app_views.MainPage,name='MainPage'),
     path('Ops_GreenShit',main_app_views.GreenShitOps,name='GreenShitOps'),
